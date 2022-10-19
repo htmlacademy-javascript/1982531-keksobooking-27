@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Dilyara Khayatulina](https://up.htmlacademy.ru/javascript/27/user/1982531).
-* Наставник: `Pavel Nyukalo`.
+* Наставник: [Pavel Nyukalo](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 
