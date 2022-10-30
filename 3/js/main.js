@@ -10,10 +10,10 @@ function getRandomInclusive(min, max) {
 }
 getRandomInclusive(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
 
-function getRandomFloat(min, max) {
-  const random = Math.random() * (max - min) + min;
+function getRandomFloat(min, max, comma) {
+  const random = Math.random().toFixed(comma) * (max - min) + min;
   if (min >= 0 && max >= min) {
-    return random.toFixed(3);
+    return random;
   }
   return NaN;
 }
