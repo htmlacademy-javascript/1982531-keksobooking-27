@@ -18,4 +18,3 @@ function getRandomFloat(min, max, comma) {
   return NaN;
 }
 getRandomFloat(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-console.log(getRandomFloat(3, 5, 4));
