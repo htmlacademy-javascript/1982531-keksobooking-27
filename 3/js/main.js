@@ -1,24 +1,20 @@
-function getRndInteger(min, max) {
-    const getRndInteger = Math.floor(Math.random() * (max - min + 1) ) + min;
-    if (min < 0 || max <= min || typeof max !== 'number') {
-        return NaN
-    }
-    return Math.floor(Math.random() * (max - min + 1) ) + min; //html5css.ru
-}
-console.log(getRndInteger(6, 9));
-
-function getRndFlt(min, max) {
-    const getRndFlt = Math.random() * (max - min) + min;
-    if (min < 0 || typeof max !== 'number' || typeof min !== 'number') {
-        return NaN 
-        if (max < min) {
-            return min = min+max;
-                   max = min-max;
-                   min = min-max;
-       }
-    } 
-    return Math.random() * (max - min) + min;
+const MIN_RANDOM_NUMBER = 6;
+const MAX_RANDOM_NUMBER = 9;
+function getRandomInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  if (min < 0 || max <= min || typeof max !== 'number' || typeof min !== 'number') {
+    return NaN;
   }
-  console.log(getRndFlt(-9, 6).toFixed(3));
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+getRandomInclusive(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
 
-  
+function getRandomFloat(min, max) {
+  const random = Math.random() * (max - min) + min;
+  if (min >= 0 && max >= min) {
+    return random.toFixed(3);
+  }
+  return NaN;
+}
+getRandomFloat(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
