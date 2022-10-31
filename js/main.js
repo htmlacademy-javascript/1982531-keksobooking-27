@@ -1,5 +1,6 @@
 const MIN_RANDOM_NUMBER = 6;
 const MAX_RANDOM_NUMBER = 9;
+const COMMA_RANDOM_NUMBER = 3;
 function getRandomInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -10,11 +11,12 @@ function getRandomInclusive(min, max) {
 }
 getRandomInclusive(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
 
-function getRandomFloat(min, max, comma) {
+function getRandomFloat(min, max, comma = 2) {
   const random = Math.random().toFixed(comma) * (max - min) + min;
   if (min >= 0 && max >= min) {
     return random;
   }
   return NaN;
 }
-getRandomFloat(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+getRandomFloat(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER, COMMA_RANDOM_NUMBER);
+
